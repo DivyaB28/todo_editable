@@ -1,0 +1,21 @@
+$source-code-font-family: "Source Code Pro", monospace;
+$color-blue: hsl(243, 74%, 42%);
+$color-light-blue: hsla(201, 72%, 47%, 0.845);
+$color-grey: hsla(0, 5%, 67%, 0.3);
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  line-height: 1.3;
+  font-family: $source-code-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

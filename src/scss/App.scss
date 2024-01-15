@@ -1,0 +1,105 @@
+@use "index";
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(
+    to left,
+    index.$color-grey,
+    index.$color-light-blue
+  );
+  color: index.$color-blue;
+
+  h1 {
+    font-weight: 600;
+    text-align: center;
+  }
+}
+input {
+  padding: 1rem 2rem;
+  font-weight: 400;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0.5rem;
+  border: 2px solid index.$color-grey;
+
+  &:focus-visible {
+    outline: 2px solid index.$color-light-blue;
+  }
+}
+
+button {
+  padding: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  background-color: index.$color-grey;
+  border: 1px solid index.$color-grey;
+  border-radius: 0.5rem;
+  color: index.$color-blue;
+
+  &.button__delete {
+    background: no-repeat
+      url("../scss/icons/delete_FILL0_wght400_GRAD0_opsz24.svg");
+    background-size: contain;
+    border: 0;
+  }
+
+  &.button__edit {
+    background: no-repeat
+      url("../scss/icons/edit_FILL0_wght400_GRAD0_opsz24.svg");
+    background-size: contain;
+    border: 0;
+  }
+  &:active {
+    box-shadow: 2px 2px 5px index.$color-light_blue;
+  }
+}
+
+@media (min-width: 365px) {
+  main {
+    position: absolute;
+    top: 8rem;
+    left: 2rem;
+    margin: 1em auto;
+    font-size: 1rem;
+
+    &:only-child {
+      margin: 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        text-align: center;
+        box-shadow: 1px 1px 2px index.$color-grey;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        width: 100%;
+
+        .task_todo {
+          display: flex;
+          justify-content: space-between;
+
+          .checked {
+            text-decoration: line-through;
+          }
+
+          .notChecked {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  main {
+    left: 40%;
+  }
+}
